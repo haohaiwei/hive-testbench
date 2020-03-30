@@ -12,8 +12,8 @@ Prerequisites
 =============
 
 You will need:
-* Hadoop 2.2 or later cluster or Sandbox.
-* Apache Hive.
+* Hadoop 3.0.0 or later cluster or Sandbox.
+* Apache Hive (3.1.0).
 * Between 15 minutes and 2 days to generate data (depending on the Scale Factor you choose and available hardware).
 * If you plan to generate 1TB or more of data, using Apache Hive 13+ to generate the data is STRONGLY suggested.
 
@@ -66,10 +66,8 @@ All of these steps should be carried out on your Hadoop cluster.
   This example assumes you have generated 1 TB of TPC-DS data during Step 5:
 
   	```
-  	cd sample-queries-tpcds
-  	hive -i testbench.settings
-  	hive> use tpcds_bin_partitioned_orc_1000;
-  	hive> source query55.sql;
+  	cd hive-testbench
+        perl runSuite.pl tpcds 100 <format> 
   	```
 
   Note that the database is named based on the Data Scale chosen in step 3. At Data Scale 10000, your database will be named tpcds_bin_partitioned_orc_10000. At Data Scale 1000 it would be named tpch_flat_orc_1000. You can always ```show databases``` to get a list of available databases.

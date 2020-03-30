@@ -1,0 +1,32 @@
+set ambari.hive.db.schema.name=hive;
+set fs.file.impl.disable.cache=true;
+set fs.hdfs.impl.disable.cache=true;
+set hive.auto.convert.join.noconditionaltask=tt
+rue;
+set hive.auto.convert.join=true;
+set hive.auto.convert.sortmerge.join=true;
+set hive.compactor.abortedtxn.threshold=1000;
+set hive.compactor.check.interval=300;
+set hive.compactor.delta.num.threshold=10;
+set hive.compactor.delta.pct.threshold=0.1f;
+set hive.compactor.initiator.on=false;
+set hive.compactor.worker.threads=0;
+set hive.compactor.worker.timeout=86400;
+set hive.compute.query.using.stats=true;
+set hive.enforce.sorting=true;
+set hive.enforce.sortmergebucketmapjoin=true;
+set hive.execution.engine=tez;
+set hive.limit.pushdown.memory.usage=0.04;
+set hive.map.aggr=true;
+set hive.mapjoin.bucket.cache.size=10000;
+set hive.mapred.reduce.tasks.speculative.execuu
+tion=false;
+set hive.metastore.cache.pinobjtypes=Table,Datt
+abase,Type,FieldSchema,Order;
+set hive.metastore.client.socket.timeout=60;
+set hive.optimize.reducededuplication.min.reduu
+cer=4;
+set hive.optimize.reducededuplication=true;
+set hive.orc.splits.include.file.footer=false;
+set hive.server2.tez.sessions.per.default.queuu
+e=1;
